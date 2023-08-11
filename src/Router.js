@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import JoinInfo from './pages/Join/Join_info';
-import Login from './pages/Login';
-import JoinDone from './pages/Join/Join_done';
-import PostAdd from './pages/Post/Post_add';
-import PostDetail from './pages/Post/Post_detail';
-import PostEditing from './pages/Post/Post_editing';
-import PostList from './pages/Post/Post_list';
+import JoinInfo from './pages/Join/JoinInfo';
+import Login from './pages/Login/Login';
+import JoinDone from './pages/Join/JoinDone';
+import PostAdd from './pages/Post/PostAdd';
+import PostDetail from './pages/Post/PostDetail';
+import PostEditing from './pages/Post/PostEditing';
+import PostList from './pages/Post/PostList';
 
 const Router = () => {
   return (
