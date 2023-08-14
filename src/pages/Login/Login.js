@@ -4,7 +4,7 @@ import './Login.scss';
 
 const Login = () => {
   return (
-    <article>
+    <article className="loginArticle">
       <div className="logoBox">
         <img src="./images/Logo.png" alt="/" />
         <img src="./images/logo_wecode.png" alt="/" />
@@ -18,9 +18,13 @@ const Login = () => {
             placeholder="비밀번호"
           />
         </div>
-        <button>로그인</button>
-        <div className="memberJoin">
+        <button>
           <Link to="/" className="linkStyle">
+            로그인
+          </Link>
+        </button>
+        <div className="memberJoin">
+          <Link to="/join-info" className="linkStyle">
             회원 가입
           </Link>
           <div></div>

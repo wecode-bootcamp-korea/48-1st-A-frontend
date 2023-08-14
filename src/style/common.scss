@@ -20,12 +20,12 @@ body {
   justify-content: center;
 }
 article {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 576px;
   height: 80vh;
   background-color: $white;
   border: 1px solid #e5e5e5;
   border-radius: 16px;
   padding: 40px 24px;
-  overflow: auto;
 }
