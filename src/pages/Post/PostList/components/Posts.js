@@ -1,6 +1,6 @@
 import '../PostList.scss';
 
-const Posts = ({ postData }) => {
+const Posts = ({ postData, formateDate }) => {
   return (
     <>
       {postData.map((postData, index) => (
@@ -16,7 +16,9 @@ const Posts = ({ postData }) => {
               <span className="nameProfile">{postData.nickName}</span>
             </div>
             <div className="functionWrap">
-              <span className="dateInfo">00. 00. 00</span>
+              <span className="dateInfo">
+                {formateDate(new Date(postData.createdAt))}
+              </span>
               <button className="deleteBtn">삭제</button>
               <button className="modifyBtn">수정</button>
             </div>
