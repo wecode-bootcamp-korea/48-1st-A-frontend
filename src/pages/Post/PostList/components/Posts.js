@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import '../PostList.scss';
 
 const Posts = ({ postData }) => {
@@ -29,7 +28,7 @@ const Posts = ({ postData }) => {
           <div className="actionInfo">
             <div className="actionWrap">
               <div className="likeInfo">좋아요 {postData.likeCount}</div>
-              <div className="commentInfo">댓글 00</div>
+              <div className="commentInfo">댓글 {postData.comments.length}</div>
             </div>
             <img
               className="heartIcon"

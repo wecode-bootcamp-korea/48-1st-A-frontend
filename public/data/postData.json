@@ -5,7 +5,32 @@
     "userProfile": "images/pic.png",
     "content": "일라이자 효과는 인간의 사고 과정과 감정을 AI 시스템에 잘못 돌리는 사람들의 경향을 말하며, 따라서 시스템이 실제보다 더 지능적이라고 믿는다. 이 현상은 1966년 MIT 교수 조셉 웨이젠바움이 만든 챗봇인 ELIZA의 이름을 따서 명명되었다.",
     "createdAt": "2023-07-27T19:26:17Z",
-    "likeCount": 52
+    "likeCount": 52,
+    "feedImages": ["1번 이미지 URL", "2번 이미지 URL", "등등"],
+    "isLike": false,
+    "comments": [
+      {
+        "commentId": 1,
+        "userName": "pliossun",
+        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "comment": "집중!!!!!! 이로군요",
+        "createdAt": "2023-07-27T21:26:17Z"
+      },
+      {
+        "commentId": 2,
+        "userName": "wecode_founder",
+        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "comment": "막판 스퍼트 고고",
+        "createdAt": "2023-07-27T19:26:17Z"
+      },
+      {
+        "commentId": 3,
+        "userName": "wecode_founder",
+        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "comment": "막판 스퍼트 고고",
+        "createdAt": "2023-07-27T19:26:17Z"
+      }
+    ]
   },
 
   {
@@ -14,7 +39,25 @@
     "userProfile": "/images/pic.png",
     "content": "인간의 사고 과정과 감정을 AI 시스템에 잘못 돌리는 사람들의 경향을 말하며, 따라서 시스템이 실제보다 더 지능적이라고 믿는다.",
     "createdAt": "2023-06-27T19:26:17Z",
-    "likeCount": 23
+    "likeCount": 23,
+    "feedImages": ["1번 이미지 URL", "2번 이미지 URL", "등등"],
+    "isLike": false,
+    "comments": [
+      {
+        "commentId": 1,
+        "userName": "pliossun",
+        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "comment": "집중!!!!!! 이로군요",
+        "createdAt": "2023-07-27T21:26:17Z"
+      },
+      {
+        "commentId": 2,
+        "userName": "wecode_founder",
+        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "comment": "막판 스퍼트 고고",
+        "createdAt": "2023-07-27T19:26:17Z"
+      }
+    ]
   },
 
   {
@@ -23,7 +66,18 @@
     "userProfile": "/images/pic.png",
     "content": "이 현상은 1966년 MIT 교수 조셉 웨이젠바움이 만든 챗봇인 ELIZA의 이름을 따서 명명되었다.",
     "createdAt": "2023-05-27T19:26:17Z",
-    "likeCount": 12
+    "likeCount": 12,
+    "feedImages": ["1번 이미지 URL", "2번 이미지 URL", "등등"],
+    "isLike": false,
+    "comments": [
+      {
+        "commentId": 1,
+        "userName": "pliossun",
+        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "comment": "집중!!!!!! 이로군요",
+        "createdAt": "2023-07-27T21:26:17Z"
+      }
+    ]
   },
   {
     "id": 4,
@@ -31,7 +85,25 @@
     "userProfile": "/images/pic.png",
     "content": "1966년 MIT 교수 조셉 웨이젠바움이 만든 챗봇인 ELIZA의 이름을 따서 명명되었다.",
     "createdAt": "2023-04-27T19:26:17Z",
-    "likeCount": 76
+    "likeCount": 76,
+    "feedImages": ["1번 이미지 URL", "2번 이미지 URL", "등등"],
+    "isLike": false,
+    "comments": [
+      {
+        "commentId": 1,
+        "userName": "pliossun",
+        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "comment": "집중!!!!!! 이로군요",
+        "createdAt": "2023-07-27T21:26:17Z"
+      },
+      {
+        "commentId": 2,
+        "userName": "wecode_founder",
+        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "comment": "막판 스퍼트 고고",
+        "createdAt": "2023-07-27T19:26:17Z"
+      }
+    ]
   },
   {
     "id": 5,
@@ -39,7 +111,10 @@
     "userProfile": "/images/pic.png",
     "content": "시스템에 잘못 돌리는 사람들의 경향을 말하며, 따라서 시스템이 실제보다 더 지능적이라고 믿는다. 봇인 ELIZA의 이름을 따서 명명되었다.",
     "createdAt": "2023-03-27T19:26:17Z",
-    "likeCount": 96
+    "likeCount": 96,
+    "feedImages": ["1번 이미지 URL", "2번 이미지 URL", "등등"],
+    "isLike": false,
+    "comments": []
   },
   {
     "id": 6,
@@ -47,7 +122,25 @@
     "userProfile": "/images/pic.png",
     "content": "시스템이 실제보다 더 지능적이라고 믿는다. 이 현상은 1966년 MIT 교수 조셉 웨이젠바움이 만든 챗봇인 ELIZA의 이름을 따서 명명되었다.",
     "createdAt": "2023-02-27T19:26:17Z",
-    "likeCount": 112
+    "likeCount": 112,
+    "feedImages": ["1번 이미지 URL", "2번 이미지 URL", "등등"],
+    "isLike": false,
+    "comments": [
+      {
+        "commentId": 1,
+        "userName": "pliossun",
+        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "comment": "집중!!!!!! 이로군요",
+        "createdAt": "2023-07-27T21:26:17Z"
+      },
+      {
+        "commentId": 2,
+        "userName": "wecode_founder",
+        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "comment": "막판 스퍼트 고고",
+        "createdAt": "2023-07-27T19:26:17Z"
+      }
+    ]
   },
   {
     "id": 7,
@@ -55,7 +148,18 @@
     "userProfile": "/images/pic.png",
     "content": "일라이자 효과는 인간의 사고 과정과 감정을 AI 시스템에 잘못 돌리는 사람들의 경향을 말하며, 따라서 시스템이 실제보다 더 지능적이라고 믿는다. 이 현상은 1966년 MIT 교수 조셉 웨이젠바움이 만든 챗봇인 ELIZA의 이름을 따서 명명되었다.",
     "createdAt": "2023-01-27T19:26:17Z",
-    "likeCount": 81
+    "likeCount": 81,
+    "feedImages": ["1번 이미지 URL", "2번 이미지 URL", "등등"],
+    "isLike": false,
+    "comments": [
+      {
+        "commentId": 1,
+        "userName": "pliossun",
+        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "comment": "집중!!!!!! 이로군요",
+        "createdAt": "2023-07-27T21:26:17Z"
+      }
+    ]
   },
   {
     "id": 8,
@@ -63,6 +167,24 @@
     "userProfile": "/images/pic.png",
     "content": "일라이자 효과는 인간의 사고 과정과 감정을 AI 시스템에 잘못 돌리는 사람들의 경향을 말하며, 따라서 시스템이 실제보다 더 지능적이라고 믿는다. 이 현상은 1966년 MIT 교수 조셉 웨이젠바움이 만든 챗봇인 ELIZA의 이름을 따서 명명되었다.",
     "createdAt": "2022-12-27T19:26:17Z",
-    "likeCount": 78
+    "likeCount": 78,
+    "feedImages": ["1번 이미지 URL", "2번 이미지 URL", "등등"],
+    "isLike": true,
+    "comments": [
+      {
+        "commentId": 1,
+        "userName": "pliossun",
+        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "comment": "집중!!!!!! 이로군요",
+        "createdAt": "2023-07-27T21:26:17Z"
+      },
+      {
+        "commentId": 2,
+        "userName": "wecode_founder",
+        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "comment": "막판 스퍼트 고고",
+        "createdAt": "2023-07-27T19:26:17Z"
+      }
+    ]
   }
 ]
