@@ -1,4 +1,5 @@
 import '../PostList.scss';
+import './Posts.scss';
 
 const Posts = ({ postData, formateDate }) => {
   return (
@@ -12,7 +13,6 @@ const Posts = ({ postData, formateDate }) => {
                 src={process.env.PUBLIC_URL + postData.userProfile}
                 alt="프로필 이미지"
               />
-
               <span className="nameProfile">{postData.nickName}</span>
             </div>
             <div className="functionWrap">
