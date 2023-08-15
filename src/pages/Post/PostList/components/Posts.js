@@ -34,7 +34,7 @@ const Posts = ({ postData, formateDate }) => {
           <img className="heartIcon" src="/images/heart.svg" alt="좋아요" />
         </div>
       </div>
-      <PostReply />
+      <PostReply comments={comments} formateDate={formateDate} />
     </li>
   );
 };

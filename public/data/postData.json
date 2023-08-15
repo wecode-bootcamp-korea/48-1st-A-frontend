@@ -12,23 +12,23 @@
       {
         "commentId": 1,
         "userName": "pliossun",
-        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "userProfile": "/images/pic.png",
         "comment": "집중!!!!!! 이로군요",
-        "createdAt": "2023-07-27T21:26:17Z"
+        "createdAt": "2023-07-20T21:26:17Z"
       },
       {
         "commentId": 2,
         "userName": "wecode_founder",
-        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "userProfile": "/images/pic.png",
         "comment": "막판 스퍼트 고고",
-        "createdAt": "2023-07-27T19:26:17Z"
+        "createdAt": "2023-06-23T19:26:17Z"
       },
       {
         "commentId": 3,
         "userName": "wecode_founder",
-        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
-        "comment": "막판 스퍼트 고고",
-        "createdAt": "2023-07-27T19:26:17Z"
+        "userProfile": "/images/pic.png",
+        "comment": "가보자고!!",
+        "createdAt": "2023-05-12T19:26:17Z"
       }
     ]
   },
@@ -45,16 +45,16 @@
     "comments": [
       {
         "commentId": 1,
-        "userName": "pliossun",
-        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
-        "comment": "집중!!!!!! 이로군요",
+        "userName": "rabbit-lover",
+        "userProfile": "/images/pic.png",
+        "comment": "점심!!!!!! 이로군요",
         "createdAt": "2023-07-27T21:26:17Z"
       },
       {
         "commentId": 2,
-        "userName": "wecode_founder",
-        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
-        "comment": "막판 스퍼트 고고",
+        "userName": "wecode_lover",
+        "userProfile": "/images/pic.png",
+        "comment": "야식 스퍼트 고고",
         "createdAt": "2023-07-27T19:26:17Z"
       }
     ]
@@ -72,9 +72,9 @@
     "comments": [
       {
         "commentId": 1,
-        "userName": "pliossun",
-        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
-        "comment": "집중!!!!!! 이로군요",
+        "userName": "student",
+        "userProfile": "/images/pic.png",
+        "comment": "멘토!!!!!! 이시군요",
         "createdAt": "2023-07-27T21:26:17Z"
       }
     ]
@@ -91,16 +91,16 @@
     "comments": [
       {
         "commentId": 1,
-        "userName": "pliossun",
-        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
-        "comment": "집중!!!!!! 이로군요",
+        "userName": "wow05566",
+        "userProfile": "/images/pic.png",
+        "comment": "와우!!!!!!!!!",
         "createdAt": "2023-07-27T21:26:17Z"
       },
       {
         "commentId": 2,
         "userName": "wecode_founder",
-        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
-        "comment": "막판 스퍼트 고고",
+        "userProfile": "/images/pic.png",
+        "comment": "집에 가고 싶어요.",
         "createdAt": "2023-07-27T19:26:17Z"
       }
     ]
@@ -129,14 +129,14 @@
       {
         "commentId": 1,
         "userName": "pliossun",
-        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "userProfile": "/images/pic.png",
         "comment": "집중!!!!!! 이로군요",
         "createdAt": "2023-07-27T21:26:17Z"
       },
       {
         "commentId": 2,
         "userName": "wecode_founder",
-        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "userProfile": "/images/pic.png",
         "comment": "막판 스퍼트 고고",
         "createdAt": "2023-07-27T19:26:17Z"
       }
@@ -155,7 +155,7 @@
       {
         "commentId": 1,
         "userName": "pliossun",
-        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "userProfile": "/images/pic.png",
         "comment": "집중!!!!!! 이로군요",
         "createdAt": "2023-07-27T21:26:17Z"
       }
@@ -174,14 +174,14 @@
       {
         "commentId": 1,
         "userName": "pliossun",
-        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "userProfile": "/images/pic.png",
         "comment": "집중!!!!!! 이로군요",
         "createdAt": "2023-07-27T21:26:17Z"
       },
       {
         "commentId": 2,
         "userName": "wecode_founder",
-        "userProfile": "코멘트 남긴 유저의 프로필 이미지 URL",
+        "userProfile": "/images/pic.png",
         "comment": "막판 스퍼트 고고",
         "createdAt": "2023-07-27T19:26:17Z"
       }
