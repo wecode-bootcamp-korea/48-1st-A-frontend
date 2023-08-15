@@ -6,7 +6,7 @@
   font-size: 18px;
   font-weight: 800;
 }
-article {
+.articlePostAdd {
   .container {
     height: 100%;
     display: flex;
@@ -58,9 +58,11 @@ article {
     width: 528px;
     border-top: 1px solid #e6e6e6;
     padding-top: 24px;
+
     .bottomBtn {
       display: flex;
       justify-content: space-between;
+
       .addCancel {
         @include inputBtn;
         color: $blue;

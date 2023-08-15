@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './PostAdd.scss';
 import { useNavigate } from 'react-router-dom';
+import './PostAdd.scss';
 
-const Post_add = () => {
+const PostAdd = () => {
   const [content, setContent] = useState('');
 
   const saveContent = event => {
@@ -17,27 +17,27 @@ const Post_add = () => {
   const handleSubmit = () => {
     if (content.length < 1) {
       alert('내용을 확인해주세요.');
-    } else {
-      fetch('', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          content: content,
-        }),
-      }).then(response => response.json());
-
-      alert('게시글이 등록되었습니다.');
-      navigate('/post-list');
+      return;
     }
+    fetch('', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        content,
+      }),
+    }).then(response => response.json());
+
+    alert('게시글이 등록되었습니다.');
+    navigate('/post-list');
   };
 
   return (
-    <article>
+    <article className="articlePostAdd">
       <div className="container">
         <div className="profileImg">
-          <img src="\images\user1.png" alt="유저사진" />
+          <img src="\images\user1.png" />
         </div>
         <div className="content">
           <p className="userName">Name</p>
@@ -50,10 +50,10 @@ const Post_add = () => {
       </div>
       <div className="bottom">
         <div className="bottomBtn">
-          <button className="addCancel" onClick={goToBack} type="button">
+          <button className="addCancel" onClick={goToBack}>
             취소
           </button>
-          <button className="addPost" onClick={handleSubmit} type="button">
+          <button className="addPost" onClick={handleSubmit}>
             게시
           </button>
         </div>
@@ -62,4 +62,4 @@ const Post_add = () => {
   );
 };
 
-export default Post_add;
+export default PostAdd;
