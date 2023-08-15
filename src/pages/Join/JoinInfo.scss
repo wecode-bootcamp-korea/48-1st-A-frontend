@@ -35,6 +35,26 @@
       margin-bottom: 8px;
     }
 
+    .infoDefault {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        color: red;
+        font-size: 12px;
+      }
+    }
+
+    .infoSelect {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        color: $grey60;
+        font-size: 12px;
+      }
+    }
+
     .containerBox {
       height: auto;
       display: flex;
@@ -112,24 +132,17 @@
     }
   }
 
-  .btnStyle {
-    padding-left: 24px;
-
-    button {
-      width: 528px;
-      height: 56px;
-      margin-top: 24px;
-      text-align: center;
-      background-color: $blue;
-      border: 0;
-      border-radius: 6px;
-      font-size: 18px;
-      font-weight: 800;
-
-      .linkStyle {
-        color: $white;
-        text-decoration: none;
-      }
-    }
+  .loginBtn {
+    margin-left: 24px;
+    width: 528px;
+    height: 56px;
+    margin-top: 24px;
+    text-align: center;
+    background-color: $blue;
+    border: 0;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 800;
+    color: $white;
   }
 }

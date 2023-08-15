@@ -1,8 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './JoinDone.scss';
 
 const JoinDone = () => {
+  const navigate = useNavigate();
+
+  const joinDoneOk = () => {
+    navigate('/');
+  };
   return (
     <article className="joinDoneArticle">
       <div className="goBack">
@@ -21,10 +26,8 @@ const JoinDone = () => {
         </div>
       </div>
       <div className="containerBox">
-        <button>
-          <Link to="/" className="linkStyle">
-            확인
-          </Link>
+        <button className="loginBtn" type="button" onClick={joinDoneOk}>
+          완료
         </button>
       </div>
     </article>

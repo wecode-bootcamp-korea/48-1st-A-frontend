@@ -45,7 +45,7 @@
         padding: 16px;
       }
     }
-    button {
+    .loginBtn {
       width: 528px;
       height: 56px;
       margin: 16px 0;
@@ -56,11 +56,6 @@
       color: $white;
       font-size: 18px;
       font-weight: 800;
-
-      .linkStyle {
-        color: $white;
-        text-decoration: none;
-      }
     }
 
     .memberJoin {
