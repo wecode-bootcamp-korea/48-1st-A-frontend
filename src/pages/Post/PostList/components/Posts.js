@@ -1,5 +1,5 @@
-import './Posts.scss';
 import PostReply from './PostReply';
+import './Posts.scss';
 
 const Posts = ({ postData, formateDate }) => {
   const { id, userProfile, nickName, createdAt, likeCount, content, comments } =
