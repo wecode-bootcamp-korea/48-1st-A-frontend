@@ -1,11 +1,19 @@
+import { useState } from 'react';
 import PostReply from './PostReply';
 import './Posts.scss';
 
 const Posts = ({ postData, formateDate }) => {
   const { id, userProfile, nickName, createdAt, likeCount, content, comments } =
     postData;
+
+  const [replyToggle, setReplyToggle] = useState(false);
+
+  const openClseTog = () => {
+    setReplyToggle(true);
+  };
+
   return (
-    <li key={id} className="postListContainer">
+    <li key={id} className="postListContainer" onClick={openClseTog}>
       <div className="postContainer">
         <div className="writerDesktop">
           <div className="userInfoWrap">
@@ -34,7 +42,11 @@ const Posts = ({ postData, formateDate }) => {
           <img className="heartIcon" src="/images/heart.svg" alt="좋아요" />
         </div>
       </div>
-      <PostReply comments={comments} formateDate={formateDate} />
+      <PostReply
+        className={replyToggle ? 'openTog' : 'closeTog'}
+        comments={comments}
+        formateDate={formateDate}
+      />
     </li>
   );
 };

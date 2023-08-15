@@ -33,6 +33,8 @@
       background: var(--blue, #2d71f7);
       color: $white;
       @include label;
+
+      cursor: pointer;
     }
   }
 }

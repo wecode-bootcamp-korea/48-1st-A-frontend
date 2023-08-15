@@ -113,6 +113,14 @@
           cursor: pointer;
         }
       }
+
+      .openTog {
+        display: block;
+      }
+
+      .closeTog {
+        display: none;
+      }
     }
   }
 }

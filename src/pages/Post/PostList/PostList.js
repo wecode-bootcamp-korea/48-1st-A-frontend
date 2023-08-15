@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Posts from './components/Posts';
 import './PostList.scss';
 
@@ -17,6 +18,11 @@ const PostList = () => {
         setPostData(result);
       });
   }, []);
+
+  const navigate = useNavigate();
+  const goToPostEditing = () => {
+    navigate('/post-editing');
+  };
 
   const formateDate = date => {
     const year = date.getFullYear().toString().slice(-2);
@@ -37,7 +43,9 @@ const PostList = () => {
       </ul>
 
       <div className="bottomAction">
-        <button className="writeBtn">글 쓰기</button>
+        <button className="writeBtn" onClick={goToPostEditing}>
+          글 쓰기
+        </button>
       </div>
     </article>
   );
