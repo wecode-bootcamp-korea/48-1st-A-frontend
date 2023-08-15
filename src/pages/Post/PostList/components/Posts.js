@@ -23,7 +23,7 @@ const Posts = ({ postData, formateDate }) => {
           </div>
         </div>
 
-        <div className="postTextContainer body1">
+        <div className="postTextContainer">
           <p>{content}</p>
         </div>
         <div className="actionInfo">
