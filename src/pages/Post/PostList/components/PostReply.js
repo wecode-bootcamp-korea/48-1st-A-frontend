@@ -1,8 +1,8 @@
 import './PostReply.scss';
 
-const PostReply = ({ comments, formateDate }) => {
+const PostReply = ({ comments, formateDate, replyToggle, openCloseTog }) => {
   return (
-    <div className="replyToggle">
+    <div className={replyToggle ? 'replyToggle' : ' closeTog'}>
       <div className="replyInputContainer">
         <input
           className="replyInput"

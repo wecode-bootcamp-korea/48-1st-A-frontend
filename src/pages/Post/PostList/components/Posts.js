@@ -8,12 +8,12 @@ const Posts = ({ postData, formateDate }) => {
 
   const [replyToggle, setReplyToggle] = useState(false);
 
-  const openClseTog = () => {
-    setReplyToggle(true);
+  const openCloseTog = () => {
+    setReplyToggle(replyToggle => !replyToggle);
   };
 
   return (
-    <li key={id} className="postListContainer" onClick={openClseTog}>
+    <li key={id} className="postListContainer" onClick={openCloseTog}>
       <div className="postContainer">
         <div className="writerDesktop">
           <div className="userInfoWrap">
@@ -43,9 +43,10 @@ const Posts = ({ postData, formateDate }) => {
         </div>
       </div>
       <PostReply
-        className={replyToggle ? 'openTog' : 'closeTog'}
         comments={comments}
         formateDate={formateDate}
+        replyToggle={replyToggle}
+        openCloseTog={openCloseTog}
       />
     </li>
   );
