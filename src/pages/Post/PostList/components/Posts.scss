@@ -1,9 +1,7 @@
 @import '/src/style/variables.scss';
-@import '/src/style/common.scss';
-@import '/src/style/reset.scss';
-@import '../PostList.scss';
+@import '/src/pages/Post/PostList/components/textStyle.scss';
 
-article {
+.articlePostList {
   .postList {
     .postListContainer {
       width: 100%;
@@ -17,7 +15,7 @@ article {
       border-bottom: 1px solid var(--grey-90, #e6e6e6);
       margin-bottom: 24px;
 
-      @include body1;
+      @include bodyTextL;
 
       .writerDesktop {
         display: flex;
@@ -47,18 +45,18 @@ article {
           align-items: center;
 
           .dateInfo {
-            @include body2;
+            @include bodyTextM;
             color: $grey60;
             margin-left: 16px;
           }
 
           .deleteBtn {
-            @include body2;
+            @include bodyTextM;
             color: $red;
           }
 
           .modifyBtn {
-            @include body2;
+            @include bodyTextM;
             color: $black;
           }
 
@@ -73,7 +71,7 @@ article {
 
       .postTextContainer {
         p {
-          @include body1;
+          @include bodyTextL;
         }
       }
 
@@ -85,7 +83,7 @@ article {
         gap: 8px;
         width: 100%;
         height: auto;
-        @include body2;
+        @include bodyTextM;
 
         .actionWrap {
           display: flex;
@@ -94,7 +92,7 @@ article {
 
           gap: 12px;
           color: $grey60;
-          @include body2;
+          @include bodyTextM;
         }
 
         .heartIcon {

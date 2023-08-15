@@ -1,7 +1,6 @@
-import React from 'react';
-import './PostList.scss';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Posts from './components/Posts';
+import './PostList.scss';
 
 const PostList = () => {
   const [postData, setPostData] = useState([]);
@@ -28,7 +27,7 @@ const PostList = () => {
   };
 
   return (
-    <article>
+    <article className="articlePostList">
       <ul className="postList">
         <Posts postData={postData} formateDate={formateDate} />
       </ul>
