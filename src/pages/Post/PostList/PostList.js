@@ -29,7 +29,9 @@ const PostList = () => {
   return (
     <article className="articlePostList">
       <ul className="postList">
-        <Posts postData={postData} formateDate={formateDate} />
+        {postData.map(postData => {
+          return <Posts postData={postData} formateDate={formateDate} />;
+        })}
       </ul>
 
       <div className="bottomAction">

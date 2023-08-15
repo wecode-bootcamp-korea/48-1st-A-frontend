@@ -3,19 +3,30 @@
 
 .articlePostList {
   .postList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
     .postListContainer {
       width: 100%;
       height: auto;
       display: flex;
-      padding: 0px 8px 24px 8px;
       flex-direction: column;
       align-items: flex-start;
-      gap: 16px;
-      padding: 0px 8px 24px 8px;
-      border-bottom: 1px solid var(--grey-90, #e6e6e6);
-      margin-bottom: 24px;
+      gap: 24px;
 
       @include bodyTextL;
+
+      .postContainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        padding: 0px 8px 24px 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        border-bottom: 1px solid var(--grey-90, #e6e6e6);
+      }
 
       .writerDesktop {
         display: flex;

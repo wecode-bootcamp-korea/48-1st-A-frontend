@@ -1,17 +1,12 @@
 import './Posts.scss';
+import PostReply from './PostReply';
 
 const Posts = ({ postData, formateDate }) => {
-  return postData.map(
-    ({
-      id,
-      userProfile,
-      nickName,
-      createdAt,
-      likeCount,
-      content,
-      comments,
-    }) => (
-      <li key={id} className="postListContainer">
+  const { id, userProfile, nickName, createdAt, likeCount, content, comments } =
+    postData;
+  return (
+    <li key={id} className="postListContainer">
+      <div className="postContainer">
         <div className="writerDesktop">
           <div className="userInfoWrap">
             <img
@@ -38,8 +33,9 @@ const Posts = ({ postData, formateDate }) => {
           </div>
           <img className="heartIcon" src="/images/heart.svg" alt="좋아요" />
         </div>
-      </li>
-    ),
+      </div>
+      <PostReply />
+    </li>
   );
 };
 
