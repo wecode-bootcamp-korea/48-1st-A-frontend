@@ -1,0 +1,16 @@
+@import '/src/style/variables.scss';
+
+.loginBtnEX {
+  margin-left: 24px;
+  width: 528px;
+  height: 56px;
+  margin-top: 24px;
+  text-align: center;
+  background-color: $blue;
+  border: 0;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 800;
+  color: $white;
+}
+// JoinDone, JoinInfo 공용 작업중

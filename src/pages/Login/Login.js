@@ -4,6 +4,7 @@ import './Login.scss';
 
 const Login = () => {
   const navigate = useNavigate;
+
   const [userInfo, setUserInfo] = useState({
     userId: '',
     userPw: '',
@@ -40,16 +41,16 @@ const Login = () => {
       });
   };
 
-  const isActive =
-    userInfo.userId.includes('@' && '.com') && userInfo.userPw.length >= 5;
+  const isActiveLogin =
+    userInfo.userId.includes('@') &&
+    userInfo.userId.includes('.com') &&
+    userInfo.userPw.length >= 5;
 
   const loginOk = () => {
-    if (isActive) {
-      goToMain();
-    } else {
-      alert('로그인을 해주세요');
-    }
+    isActiveLogin ? goToMain('/join-info') : alert('로그인을 해주세요');
   };
+
+  // loginOk ? isActiveLogin : ;
 
   return (
     <article className="loginArticle">
@@ -60,12 +61,14 @@ const Login = () => {
       <div className="containerBox">
         <div className="containerInputBox">
           <input
+            id="userId"
             className="containerInput"
             type="text"
             placeholder="이메일"
             onChange={handleInput}
           />
           <input
+            id="userPw"
             className="containerInput"
             type="password"
             placeholder="비밀번호"

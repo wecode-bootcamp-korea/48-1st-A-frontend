@@ -1,12 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './JoinInfo.scss';
 
 const JoinInfo = () => {
   const navigate = useNavigate();
 
+  const [userInfo, setUserInfo] = useState({
+    userId: '',
+    userPw: '',
+    userName: '',
+  });
+
+  const handleInput = event => {
+    const { value, id } = event.target;
+    setUserInfo({ ...userInfo, [id]: value });
+  };
+
+  const goToLoginDone = () => {
+    fetch('signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: userInfo.userId,
+        password: userInfo.userPw,
+        nickname: userInfo.userName,
+      }),
+    })
+      .then(response => {
+        response.json();
+      })
+      .then(result => {
+        if (result.accessToken) {
+          localStorage.setItem('token', result.accessToken);
+          navigate('/join-done');
+        }
+        if (result.message === '') {
+          alert('아이디는 이메일형식으로 해주세요');
+        }
+        if (result.message === '') {
+          alert('비밀번호는 5글자이상으로 해주세요');
+        }
+        if (result.message === '') {
+          alert('닉네임은 3글자 이상으로 해주세요');
+        }
+      });
+  };
+
+  const isActiveSignUp =
+    userInfo.userId.includes('@') &&
+    userInfo.userId.includes('.com') &&
+    userInfo.userPw.length >= 5 &&
+    userInfo.userName.length >= 3;
+
   const joinInfoOk = () => {
-    navigate('/join-done');
+    isActiveSignUp
+      ? goToLoginDone('/join-done')
+      : alert('필수사항을 입력해주세요');
   };
 
   return (
@@ -26,9 +75,26 @@ const JoinInfo = () => {
           </div>
           <div className="containerBox">
             <div className="containerInputBox">
-              <input className="containerInput" placeholder="이메일" />
-              <input className="containerInput" placeholder="비밀번호" />
-              <input className="containerInput" placeholder="비밀번호 확인" />
+              <input
+                id="userId"
+                className="containerInput"
+                type="text"
+                placeholder="이메일"
+                onChange={handleInput}
+              />
+              <input
+                id="userPw"
+                className="containerInput"
+                type="text"
+                placeholder="비밀번호"
+                onChange={handleInput}
+              />
+              <input
+                className="containerInput"
+                type="text"
+                placeholder="비밀번호 확인"
+                onChange={handleInput}
+              />
             </div>
           </div>
         </div>
@@ -38,7 +104,13 @@ const JoinInfo = () => {
             <span>선택사항</span>
           </div>
           <div className="containerBox">
-            <input className="containerInput" placeholder="닉네임" />
+            <input
+              id="userName"
+              className="containerInput"
+              type="text"
+              placeholder="닉네임"
+              onChange={handleInput}
+            />
           </div>
         </div>
         <div>

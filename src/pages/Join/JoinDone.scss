@@ -69,6 +69,14 @@
       font-size: 18px;
       font-weight: 800;
 
+      &:hover {
+        background-color: navy;
+      }
+
+      &:disabled {
+        background-color: $grey80;
+      }
+
       .linkStyle {
         color: $white;
         text-decoration: none;
