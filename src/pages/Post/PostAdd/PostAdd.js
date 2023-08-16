@@ -5,10 +5,6 @@ import './PostAdd.scss';
 const PostAdd = () => {
   const [content, setContent] = useState('');
 
-  const saveContent = event => {
-    setContent(event.target.value);
-  };
-
   const navigate = useNavigate();
   const goToBack = () => {
     navigate('/post-list');
@@ -43,7 +39,7 @@ const PostAdd = () => {
           <p className="userName">Name</p>
           <textarea
             value={content}
-            onChange={saveContent}
+            onChange={e => setContent(e.target.value)}
             placeholder="스레드를 시작하세요."
           />
         </div>
