@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Button from './Button/Button';
 import './PostAdd.scss';
 
 const PostAdd = () => {
@@ -46,12 +47,8 @@ const PostAdd = () => {
       </div>
       <div className="bottom">
         <div className="bottomBtn">
-          <button className="addCancel" onClick={goToBack}>
-            취소
-          </button>
-          <button className="addPost" onClick={handleSubmit}>
-            게시
-          </button>
+          <Button type="addCancel" text="취소" onClick={goToBack} />
+          <Button type="addPost" text="게시" onClick={handleSubmit} />
         </div>
       </div>
     </article>
