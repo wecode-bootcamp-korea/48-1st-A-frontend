@@ -14,8 +14,14 @@ const PostReply = ({ comments, formateDate, replyToggle }) => {
       <ul className="replyList">
         {comments.length > 0 &&
           comments.map(comments => {
-            const { commentId, userName, userProfile, comment, createdAt } =
-              comments;
+            const {
+              commentId,
+              userName,
+              userProfile,
+              comment,
+              isMyReply,
+              createdAt,
+            } = comments;
             return (
               <li key={commentId} className="replyDesktop">
                 <img

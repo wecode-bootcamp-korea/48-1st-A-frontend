@@ -30,7 +30,7 @@
       border: 0;
       border-radius: 6px;
 
-      background: var(--blue, #2d71f7);
+      background: $blue;
       color: $white;
       @include label;
       cursor: pointer;
