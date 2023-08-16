@@ -3,10 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import JoinInfo from './pages/Join/JoinInfo';
 import Login from './pages/Login/Login';
 import JoinDone from './pages/Join/JoinDone';
-import PostAdd from './pages/Post/PostAdd';
-import PostDetail from './pages/Post/PostDetail';
-import PostEditing from './pages/Post/PostEditing';
-import PostList from './pages/Post/PostList';
+import PostAdd from './pages/Post/PostAdd/PostAdd';
+import PostDetail from './pages/Post/PostDetail/PostDetail';
+import PostEditing from './pages/Post/PostEditing/PostEditing';
+import PostList from './pages/Post/PostList/PostList';
 
 const Router = () => {
   return (

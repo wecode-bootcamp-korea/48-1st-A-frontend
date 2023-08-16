@@ -1,8 +1,8 @@
 import React from 'react';
 import './JoinDone.scss';
 
-const Join_done = () => {
+const JoinDone = () => {
   return <article>sssss</article>;
 };
 
-export default Join_done;
+export default JoinDone;

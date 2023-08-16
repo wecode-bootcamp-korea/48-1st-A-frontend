@@ -1,8 +1,8 @@
 import React from 'react';
 import './JoinInfo.scss';
 
-const Join_info = () => {
+const JoinInfo = () => {
   return <div>hiq</div>;
 };
 
-export default Join_info;
+export default JoinInfo;
