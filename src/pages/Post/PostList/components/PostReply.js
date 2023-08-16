@@ -1,6 +1,6 @@
 import './PostReply.scss';
 
-const PostReply = ({ comments, formateDate, replyToggle, openCloseTog }) => {
+const PostReply = ({ comments, formateDate, replyToggle }) => {
   return (
     <div className={replyToggle ? 'replyToggle' : ' closeTog'}>
       <div className="replyInputContainer">
@@ -12,32 +12,33 @@ const PostReply = ({ comments, formateDate, replyToggle, openCloseTog }) => {
         <button className="replyBtn">댓글 게시</button>
       </div>
       <ul className="replyList">
-        {comments.map(comments => {
-          const { commentId, userName, userProfile, comment, createdAt } =
-            comments;
-          return (
-            <li key={commentId} className="replyDesktop">
-              <img
-                className="profileImg"
-                src={process.env.PUBLIC_URL + userProfile}
-                alt="프로필"
-              />
-              <div className="contentBox">
-                <div className="top">
-                  <span className="nameProfile">{userName}</span>
-                  <div className="functionWrap">
-                    <span className="dateInfo">
-                      {formateDate(new Date(createdAt))}
-                    </span>
-                    <button className="deleteBtn">삭제</button>
-                    <button className="modifyBtn">수정</button>
+        {comments.length > 0 &&
+          comments.map(comments => {
+            const { commentId, userName, userProfile, comment, createdAt } =
+              comments;
+            return (
+              <li key={commentId} className="replyDesktop">
+                <img
+                  className="profileImg"
+                  src={process.env.PUBLIC_URL + userProfile}
+                  alt="프로필"
+                />
+                <div className="contentBox">
+                  <div className="top">
+                    <span className="nameProfile">{userName}</span>
+                    <div className="functionWrap">
+                      <span className="dateInfo">
+                        {formateDate(new Date(createdAt))}
+                      </span>
+                      <button className="deleteBtn">삭제</button>
+                      <button className="modifyBtn">수정</button>
+                    </div>
                   </div>
+                  <p className="content">{comment}</p>
                 </div>
-                <p className="content">{comment}</p>
-              </div>
-            </li>
-          );
-        })}
+              </li>
+            );
+          })}
       </ul>
     </div>
   );
