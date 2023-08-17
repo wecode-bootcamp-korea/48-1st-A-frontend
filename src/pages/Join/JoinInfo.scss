@@ -1,0 +1,156 @@
+@import '/src/style/variables.scss';
+
+.joinInfoArticle {
+  padding-top: 0px;
+  padding-left: 0px;
+
+  .goBack {
+    display: flex;
+    width: 240px;
+    height: 56px;
+    margin-top: 5px;
+    padding: 0px 161px 8px 0px;
+    align-items: center;
+    text-align: center;
+
+    .goBackLink {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    p {
+      margin-top: 2px;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 24px;
+    padding-left: 24px;
+
+    p {
+      margin-bottom: 8px;
+    }
+
+    .infoDefault {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        color: red;
+        font-size: 12px;
+      }
+    }
+
+    .infoSelect {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        color: $grey60;
+        font-size: 12px;
+      }
+    }
+
+    .containerBox {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .containerInputBox {
+        :nth-child(1),
+        :nth-child(2) {
+          margin-bottom: 8px;
+        }
+      }
+
+      .containerInput {
+        width: 528px;
+        height: 56px;
+        border-radius: 6px;
+        border: 1px solid $grey88;
+        padding: 16px;
+
+        &::placeholder {
+          color: $grey88;
+        }
+      }
+    }
+  }
+
+  .phoneBox {
+    display: flex;
+    gap: 8px;
+
+    .phoneSelect {
+      width: 156px;
+      height: 56px;
+      padding-left: 16px;
+      color: $grey88;
+      border-radius: 6px;
+      border: 1px solid $grey88;
+    }
+
+    .phoneInput {
+      width: 384px;
+      height: 56px;
+      padding-left: 16px;
+      border-radius: 6px;
+      border: 1px solid $grey88;
+
+      &::placeholder {
+        color: $grey88;
+      }
+    }
+  }
+
+  .birthBox {
+    display: flex;
+    gap: 8px;
+
+    .birthYear {
+      border-radius: 6px;
+      border: 1px solid $grey88;
+      width: 136px;
+      height: 56px;
+      padding-left: 16px;
+      color: $grey88;
+    }
+
+    .birthMonth,
+    .birthDay {
+      padding-left: 16px;
+      border-radius: 6px;
+      border: 1px solid $grey88;
+      width: 188px;
+      height: 56px;
+      color: $grey88;
+    }
+  }
+
+  .loginBtn {
+    margin-left: 24px;
+    width: 528px;
+    height: 56px;
+    margin-top: 24px;
+    text-align: center;
+    background-color: $blue;
+    border: 0;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 800;
+    color: $white;
+
+    &:hover {
+      background-color: navy;
+    }
+
+    &:disabled {
+      background-color: $grey80;
+    }
+  }
+}
