@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PostReply from './PostReply';
 import './Posts.scss';
 
@@ -9,7 +10,7 @@ const Posts = ({ postData, formateDate }) => {
     profileImage,
     isMyPost,
     content,
-    idLiked,
+    isLiked,
     likeCount,
     commentsCount,
     comments,
@@ -20,6 +21,20 @@ const Posts = ({ postData, formateDate }) => {
 
   const openCloseTog = () => {
     setReplyToggle(replyToggle => !replyToggle);
+  };
+
+  const navigate = useNavigate();
+
+  const postDeleting = targetId => {
+    fetch('/data/postData.json', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+        // authorization: localStorage.getItem('access_token),
+        // Authorization: userToken,
+      },
+      body: JSON.stringify({ postId: targetId }),
+    });
   };
 
   return (
@@ -36,8 +51,20 @@ const Posts = ({ postData, formateDate }) => {
           </div>
           <div className="functionWrap">
             <span className="dateInfo">{formateDate(new Date(createdAt))}</span>
-            <button className="deleteBtn">삭제</button>
-            <button className="modifyBtn">수정</button>
+            <div className={`function ${isMyPost === false && 'inActive'}`}>
+              <button
+                className="deleteBtn"
+                onClick={() => postDeleting(postData.postId)}
+              >
+                삭제
+              </button>
+              <button
+                className="modifyBtn"
+                onClick={() => navigate('/PostEditing')}
+              >
+                수정
+              </button>
+            </div>
           </div>
         </div>
 
@@ -56,7 +83,6 @@ const Posts = ({ postData, formateDate }) => {
         comments={comments}
         formateDate={formateDate}
         replyToggle={replyToggle}
-        openCloseTog={openCloseTog}
       />
     </li>
   );

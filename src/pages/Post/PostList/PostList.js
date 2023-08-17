@@ -11,11 +11,12 @@ const PostList = () => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
+        // authorization: '토큰',
       },
     })
       .then(res => res.json())
       .then(result => {
-        setPostData(result);
+        setPostData(result.data);
       });
   }, []);
 

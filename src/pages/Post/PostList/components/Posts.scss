@@ -63,14 +63,23 @@
             margin-left: 16px;
           }
 
-          .deleteBtn {
-            @include bodyTextM;
-            color: $red;
+          .function {
+            display: flex;
+            align-items: center;
+
+            .deleteBtn {
+              @include bodyTextM;
+              color: $red;
+            }
+
+            .modifyBtn {
+              @include bodyTextM;
+              color: $black;
+            }
           }
 
-          .modifyBtn {
-            @include bodyTextM;
-            color: $black;
+          .inActive {
+            display: none;
           }
 
           button {

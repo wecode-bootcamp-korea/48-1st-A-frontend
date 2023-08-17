@@ -36,8 +36,14 @@ const PostReply = ({ comments, formateDate, replyToggle }) => {
                       <span className="dateInfo">
                         {formateDate(new Date(createdAt))}
                       </span>
-                      <button className="deleteBtn">삭제</button>
-                      <button className="modifyBtn">수정</button>
+                      <div
+                        className={`function ${
+                          isMyReply === false && 'inActive'
+                        }`}
+                      >
+                        <button className="deleteBtn">삭제</button>
+                        <button className="modifyBtn">수정</button>
+                      </div>
                     </div>
                   </div>
                   <p className="content">{comment}</p>
