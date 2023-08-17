@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Login.scss';
 
 const Login = () => {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
 
   const [userInfo, setUserInfo] = useState({
     userId: '',
@@ -16,7 +16,7 @@ const Login = () => {
   };
 
   const goToMain = () => {
-    fetch('login', {
+    fetch('http://10.58.52.168:3000/user/signIn', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -30,7 +30,7 @@ const Login = () => {
       .then(result => {
         if (result.accessToken) {
           localStorage.setItem('token', result.accessToken);
-          navigate('/');
+          navigate('/join-done');
         }
         if (result.message === 'specified user does not exist') {
           alert('존재하지 않는 아이디입니다');
@@ -49,8 +49,6 @@ const Login = () => {
   const loginOk = () => {
     isActiveLogin ? goToMain('/join-info') : alert('로그인을 해주세요');
   };
-
-  // loginOk ? isActiveLogin : ;
 
   return (
     <article className="loginArticle">
