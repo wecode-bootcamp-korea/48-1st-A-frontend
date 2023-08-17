@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Posts from './components/Posts';
+import Button from './components/Button';
 import './PostList.scss';
 
 const PostList = () => {
@@ -44,9 +45,11 @@ const PostList = () => {
       </ul>
 
       <div className="bottomAction">
-        <button className="writeBtn" onClick={goToPostEditing}>
-          글 쓰기
-        </button>
+        <Button
+          text="글 쓰기"
+          className="writeBtn"
+          function={goToPostEditing}
+        />
       </div>
     </article>
   );
