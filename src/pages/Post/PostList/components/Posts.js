@@ -38,8 +38,8 @@ const Posts = ({ postData, formateDate }) => {
   };
 
   return (
-    <li key={postId} className="postListContainer" onClick={openCloseTog}>
-      <div className="postContainer">
+    <li key={postId} className="postListContainer">
+      <div className="postContainer" onClick={openCloseTog}>
         <div className="writerDesktop">
           <div className="userInfoWrap">
             <img
@@ -83,6 +83,7 @@ const Posts = ({ postData, formateDate }) => {
         comments={comments}
         formateDate={formateDate}
         replyToggle={replyToggle}
+        postId={postId}
       />
     </li>
   );

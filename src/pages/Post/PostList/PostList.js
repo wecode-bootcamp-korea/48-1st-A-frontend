@@ -37,9 +37,13 @@ const PostList = () => {
   return (
     <article className="articlePostList">
       <ul className="postList">
-        {postData.map((postData, i) => {
+        {postData.map(postData => {
           return (
-            <Posts key={i} postData={postData} formateDate={formateDate} />
+            <Posts
+              key={postData.postId}
+              postData={postData}
+              formateDate={formateDate}
+            />
           );
         })}
       </ul>

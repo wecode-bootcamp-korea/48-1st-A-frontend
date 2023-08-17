@@ -1,6 +1,31 @@
+import { useState } from 'react';
 import './PostReply.scss';
 
-const PostReply = ({ comments, formateDate, replyToggle }) => {
+const PostReply = ({ postId, comments, formateDate, replyToggle }) => {
+  const [inputValue, setInputValue] = useState('');
+  const [commentList, setCommentList] = useState([]);
+
+  // const isCommentInput = inputValue;
+
+  const makeComment = () => {
+    if (inputValue === null) return;
+    setInputValue('');
+
+    fetch('/data/postData.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+        // authorization: localStorage.getItem('access_token)},
+      },
+      body: JSON.stringify({
+        threadId: postId,
+        content: inputValue,
+      })
+        .then(res => res.json())
+        .then(result => setCommentList(cur => [result, ...cur])),
+    });
+  };
+
   return (
     <div className={replyToggle ? 'replyToggle' : ' closeTog'}>
       <div className="replyInputContainer">
@@ -8,8 +33,11 @@ const PostReply = ({ comments, formateDate, replyToggle }) => {
           className="replyInput"
           type="text"
           placeholder="댓글을 작성해주세요."
+          onChange={event => setInputValue(event.target.value)}
         />
-        <button className="replyBtn">댓글 게시</button>
+        <button className="replyBtn" onClick={makeComment}>
+          댓글 게시
+        </button>
       </div>
       <ul className="replyList">
         {comments.length > 0 &&
