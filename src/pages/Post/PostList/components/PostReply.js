@@ -5,8 +5,6 @@ const PostReply = ({ postId, comments, formateDate, replyToggle }) => {
   const [inputValue, setInputValue] = useState('');
   const [commentList, setCommentList] = useState([]);
 
-  // const isCommentInput = inputValue;
-
   const makeComment = () => {
     if (inputValue === null) return;
     setInputValue('');

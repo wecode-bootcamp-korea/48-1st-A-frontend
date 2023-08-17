@@ -18,6 +18,8 @@ const Posts = ({ postData, formateDate }) => {
   } = postData;
 
   const [replyToggle, setReplyToggle] = useState(false);
+  const [like, setLike] = useState(false);
+  const [likedCount, setLikedCount] = useState(likeCount);
 
   const openCloseTog = () => {
     setReplyToggle(replyToggle => !replyToggle);
@@ -35,6 +37,21 @@ const Posts = ({ postData, formateDate }) => {
       },
       body: JSON.stringify({ postId: targetId }),
     });
+  };
+
+  const likeHandling = () => {
+    fetch('/data/postData.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+        // authorization: localStorage.getItem('access_token)},
+      },
+    })
+      .then(res => res.json())
+      .then(result => {
+        setLike(prev => !prev);
+        setLikedCount(like ? likedCount + 1 : likedCount - 1);
+      });
   };
 
   return (
@@ -76,7 +93,12 @@ const Posts = ({ postData, formateDate }) => {
             <div className="likeInfo">좋아요 {likeCount}</div>
             <div className="commentInfo">댓글 {commentsCount}</div>
           </div>
-          <img className="heartIcon" src="/images/heart.svg" alt="좋아요" />
+          <img
+            className="heartIcon"
+            src={isLiked ? '/images/activeHeart.svg' : '/images/heart.svg'}
+            onClick={likeHandling}
+            alt="좋아요"
+          />
         </div>
       </div>
       <PostReply
