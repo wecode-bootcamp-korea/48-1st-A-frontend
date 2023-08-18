@@ -1,0 +1,47 @@
+@mixin bodyTextL {
+  font-family: Apple SD Gothic Neo;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+@mixin bodyTextM {
+  font-family: Apple SD Gothic Neo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+@mixin nameDekstop {
+  font-family: Apple SD Gothic Neo;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin label {
+  font-family: Apple SD Gothic Neo;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+@mixin replyNameText {
+  font-family: Apple SD Gothic Neo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin caption {
+  font-family: Apple SD Gothic Neo;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

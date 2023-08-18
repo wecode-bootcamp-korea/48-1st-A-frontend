@@ -1,0 +1,44 @@
+@import '/src/style/variables.scss';
+@import '/src/pages/Post/PostList/components/textStyle.scss';
+
+.articlePostList {
+  .postList {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .bottomAction {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    margin-top: 24px;
+
+    .writeBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: var(--input-height, 56px);
+
+      padding: 0px 34px;
+      border: 0;
+      border-radius: 6px;
+
+      background: $blue;
+      color: $white;
+      @include label;
+      cursor: pointer;
+
+      &:hover {
+        border-radius: 6px;
+        background: $navy;
+      }
+    }
+  }
+}

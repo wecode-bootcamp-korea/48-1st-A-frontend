@@ -1,0 +1,133 @@
+@import '/src/style/variables.scss';
+@import '/src/pages/Post/PostList/components/textStyle.scss';
+
+.articlePostList {
+  .postList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .postListContainer {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      cursor: pointer;
+
+      @include bodyTextL;
+
+      .postContainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        padding: 0px 8px 24px 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        border-bottom: 1px solid var(--grey-90, #e6e6e6);
+      }
+
+      .writerDesktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+
+        .userInfoWrap {
+          display: flex;
+          align-items: center;
+
+          .profileImg {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin-right: 16px;
+            background-size: cover;
+            border: 1px solid $grey88;
+          }
+
+          .nameProfile {
+            @include nameDekstop;
+          }
+        }
+
+        .functionWrap {
+          display: flex;
+          align-items: center;
+
+          .dateInfo {
+            @include bodyTextM;
+            color: $grey60;
+            margin-left: 16px;
+          }
+
+          .function {
+            display: flex;
+            align-items: center;
+
+            .deleteBtn {
+              @include bodyTextM;
+              color: $red;
+            }
+
+            .modifyBtn {
+              @include bodyTextM;
+              color: $black;
+            }
+          }
+
+          .inActive {
+            display: none;
+          }
+
+          button {
+            margin-left: 16px;
+            border: 0;
+            background-color: transparent;
+            padding: 0;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .postTextContainer {
+        p {
+          @include bodyTextL;
+        }
+      }
+
+      .actionInfo {
+        display: flex;
+        flex-direction: column;
+        color: $grey60;
+
+        gap: 8px;
+        width: 100%;
+        height: auto;
+        @include bodyTextM;
+
+        .actionWrap {
+          display: flex;
+          flex-direction: row;
+          padding: 0 4px;
+
+          gap: 12px;
+          color: $grey60;
+          @include bodyTextM;
+        }
+
+        .heartIcon {
+          width: 32px;
+          height: 32px;
+          cursor: pointer;
+        }
+      }
+
+      .closeTog {
+        display: none;
+      }
+    }
+  }
+}
