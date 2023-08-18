@@ -18,7 +18,7 @@ const Posts = ({ postData, formateDate }) => {
   } = postData;
 
   const [replyToggle, setReplyToggle] = useState(false);
-  const [like, setLike] = useState(false);
+  const [like, setLike] = useState(isLiked);
   const [likedCount, setLikedCount] = useState(likeCount);
 
   const openCloseTog = () => {
@@ -36,7 +36,17 @@ const Posts = ({ postData, formateDate }) => {
         // Authorization: userToken,
       },
       body: JSON.stringify({ postId: targetId }),
-    });
+    })
+      .then(res => {
+        if (res.status === 200) {
+          alert('삭제 완료');
+        } else if (res.status === 403) {
+          return res.json();
+        }
+      })
+      .then(result => {
+        console.log('에러 메시지 ->', result.message);
+      });
   };
 
   const likeHandling = () => {
@@ -46,12 +56,8 @@ const Posts = ({ postData, formateDate }) => {
         'Content-Type': 'application/json;charset=utf-8',
         // authorization: localStorage.getItem('access_token)},
       },
-    })
-      .then(res => res.json())
-      .then(result => {
-        setLike(prev => !prev);
-        setLikedCount(like ? likedCount + 1 : likedCount - 1);
-      });
+      body: JSON.stringify({ isLiked: like }),
+    }).then(res => res.json());
   };
 
   return (
@@ -59,11 +65,7 @@ const Posts = ({ postData, formateDate }) => {
       <div className="postContainer" onClick={openCloseTog}>
         <div className="writerDesktop">
           <div className="userInfoWrap">
-            <img
-              className="profileImg"
-              src={process.env.PUBLIC_URL + profileImage}
-              alt="프로필"
-            />
+            <img className="profileImg" src={profileImage} alt="프로필" />
             <span className="nameProfile">{userName}</span>
           </div>
           <div className="functionWrap">
@@ -96,7 +98,11 @@ const Posts = ({ postData, formateDate }) => {
           <img
             className="heartIcon"
             src={isLiked ? '/images/activeHeart.svg' : '/images/heart.svg'}
-            onClick={likeHandling}
+            onClick={() => {
+              likeHandling();
+              setLike(prev => !prev);
+              setLikedCount(like ? likedCount + 1 : likedCount - 1);
+            }}
             alt="좋아요"
           />
         </div>
