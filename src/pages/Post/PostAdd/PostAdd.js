@@ -1,8 +1,8 @@
 import React from 'react';
 import './PostAdd.scss';
 
-const Post_add = () => {
+const PostAdd = () => {
   return <div>hiaa</div>;
 };
 
-export default Post_add;
+export default PostAdd;

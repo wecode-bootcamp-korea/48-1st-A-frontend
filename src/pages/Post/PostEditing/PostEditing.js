@@ -1,8 +1,8 @@
 import React from 'react';
 import './PostEditing.scss';
 
-const Post_editing = () => {
+const PostEditing = () => {
   return <div>hihi</div>;
 };
 
-export default Post_editing;
+export default PostEditing;
